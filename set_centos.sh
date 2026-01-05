@@ -32,6 +32,36 @@ else
     fi
 fi
 
+# tmux-resurrect
+tmux_resurrect_dir="$HOME/.tmux/plugins/tmux-resurrect"
+if [ -d "$tmux_resurrect_dir" ]; then
+    echo "[INFO] tmux-resurrect is already installed at $tmux_resurrect_dir"
+else
+    echo "[CLONE] Installing tmux-resurrect..."
+    if git clone https://github.com/tmux-plugins/tmux-resurrect "$tmux_resurrect_dir"; then
+        echo "[SUCCESS] tmux-resurrect cloned successfully."
+    else
+        echo "[ERROR] Failed to clone tmux-resurrect. Check network or permissions."
+        exit 1
+    fi
+fi
+
+# tmux-continuum
+tmux_continuum_dir="$HOME/.tmux/plugins/tmux-continuum"
+if [ -d "$tmux_continuum_dir" ]; then
+    echo "[INFO] tmux-continuum is already installed at $tmux_continuum_dir"
+else
+    echo "[CLONE] Installing tmux-continuum..."
+    if git clone https://github.com/tmux-plugins/tmux-continuum "$tmux_continuum_dir"; then
+        echo "[SUCCESS] tmux-continuum cloned successfully."
+    else
+        echo "[ERROR] Failed to clone tmux-continuum. Check network or permissions."
+        exit 1
+    fi
+fi
+
+
+
 tmux_conf_src=".tmux.conf"
 tmux_conf_dest="$HOME/.tmux.conf"
 if [ -f "$tmux_conf_src" ]; then
