@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Version=1.0
-Name=electron-ssr
-Comment=ssr-startup script
-Exec=electron-ssr &
-Terminal=false
-X-GNOME-Autostart-Delay=20
