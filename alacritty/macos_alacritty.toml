@@ -1,0 +1,12 @@
+[font]
+    normal = { family = "SauceCodePro NF", style = "Regular" }
+    bold = { family = "SauceCodePro NF", style = "Bold" }
+    italic = { family = "SauceCodePro NF", style = "Italic" }
+    bold_italic = { family = "SauceCodePro NF", style = "Bold Italic" }
+    size = 16.0
+[general]
+import = [
+    "~/.config/alacritty/themes/aura.toml"
+]
+[selection]
+  save_to_clipboard = true
