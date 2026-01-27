@@ -1,4 +1,4 @@
-# Reference: https://github.com/i3/i3/blob/next/etc/config
+# Reference: https://github.com/i4/i3/blob/next/etc/config
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
@@ -46,7 +46,7 @@ automatically-unhide-macos-hidden-apps = false
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
 persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "Q", "W",
-                         "R", "A", "S", "D", "F", "Z", "X", "C", "V"]
+                         "E", "A", "S", "D", "Z", "X", "C"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -105,6 +105,7 @@ on-mode-changed = []
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
+    alt-f = 'fullscreen'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
@@ -132,28 +133,15 @@ on-mode-changed = []
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
-    alt-b = 'workspace B'
-    alt-c = 'workspace C'
-    alt-d = 'workspace D'
-    alt-e = 'workspace E'
-    alt-f = 'workspace F'
-    alt-g = 'workspace G'
-    alt-i = 'workspace I'
-    alt-m = 'workspace M'
-    alt-n = 'workspace N'
-    alt-o = 'workspace O'
-    alt-p = 'workspace P'
     alt-q = 'workspace Q'
-    alt-r = 'workspace R'
-    alt-s = 'workspace S'
-    alt-t = 'workspace T'
-    alt-u = 'workspace U'
-    alt-v = 'workspace V'
     alt-w = 'workspace W'
-    alt-x = 'workspace X'
-    alt-y = 'workspace Y'
+    alt-e = 'workspace E'
+    alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+    alt-s = 'workspace S'
+    alt-d = 'workspace D'
     alt-z = 'workspace Z'
+    alt-x = 'workspace X'
+    alt-c = 'workspace C'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -225,12 +213,17 @@ on-mode-changed = []
     q = ['main', 'secondary']
     w = ['main', 'secondary']
     e = ['main', 'secondary']
-    r = ['main', 'secondary']
     a = ['main', 'secondary']
     s = ['main', 'secondary']
     d = ['main', 'secondary']
-    f = ['main', 'secondary']
     z = ['main', 'secondary']
     x = ['main', 'secondary']
     c = ['main', 'secondary']
-    v = ['main', 'secondary']
+
+[[on-window-detected]]
+    if.app-id = 'com.tencent.wwmap'
+    run = 'layout floating'
+[[on-window-detected]]
+    if.app-id = 'com.tencent.WeWorkMac'
+    run = 'layout floating'
+
