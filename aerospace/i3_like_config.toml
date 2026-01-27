@@ -11,9 +11,6 @@ config-version = 2
 after-startup-command = [
   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
 ]
-# Automatically reload the config when the config file is saved
-# After setting this to true, reload once manually to start the auto-reloading
-auto-reload-config = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -98,18 +95,13 @@ on-mode-changed = []
     # - Arrows.         left, down, up, right
 
     # All possible modifiers: cmd, alt, ctrl, shift
+    alt-enter = 'exec-and-forget open -n /Applications/Alacritty.app'
 
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
     # You can uncomment the following lines to open up terminal with alt + enter shortcut
     # (like in i3)
-    # alt-enter = '''exec-and-forget osascript -e '
-    # tell application "Terminal"
-    #     do script
-    #     activate
-    # end tell'
-    # '''
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
