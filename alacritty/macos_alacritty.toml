@@ -3,7 +3,7 @@
     bold = { family = "SauceCodePro NF", style = "Bold" }
     italic = { family = "SauceCodePro NF", style = "Italic" }
     bold_italic = { family = "SauceCodePro NF", style = "Bold Italic" }
-    size = 16.0
+    size = 14.0
 [general]
 import = [
     "~/.config/alacritty/themes/aura.toml"
