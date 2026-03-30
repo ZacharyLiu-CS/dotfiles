@@ -42,7 +42,8 @@
 # resize-overlay-duration = 4s 200ms
 font-family = "SauceCodePro NF"
 font-size = "16"
-theme = "Adwaita Dark"
+#theme = "Adwaita Dark"
+theme = "Gruvbox Dark Hard"
 link-url = true
 custom-shader = ~/.config/ghostty/shaders/cursor_sweep.glsl
 #custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
